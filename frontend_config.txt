@@ -1,0 +1,2 @@
+title='Humetro'
+favicon=logo.png
