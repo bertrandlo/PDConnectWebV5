@@ -1,0 +1,11 @@
+[submodule "backend"]
+	path = backend
+	url = https://git@bitbucket.org:bimcollaborationhub/pds-connected-backend.git
+
+[submodule "frontend"]
+	path = frontend
+	url = https://git@bitbucket.org:bimcollaborationhub/pds_connected_client.git
+
+[submodule "mobile"]
+	path = mobile
+	url = https://git@bitbucket.org:bimcollaborationhub/pds-mobile-server
