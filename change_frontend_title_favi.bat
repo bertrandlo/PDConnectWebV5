@@ -46,11 +46,13 @@ REM =========================================
 echo ---
 echo [INFO] Copying index.html to container: /usr/share/nginx/index.html
 docker cp .\frontend\dist\index.html pds-connected-client:/usr/share/nginx/index.html
+docker cp .\frontend-172\dist\index.html pds-connected-client-172:/usr/share/nginx/index.html
 
 if NOT "%newFavicon%"=="" (
     if EXIST ".\%newFavicon%" (
         echo [INFO] Copying %newFavicon% to container: /usr/share/nginx/
         docker cp ".\%newFavicon%" pds-connected-client:/usr/share/nginx/
+		docker cp ".\%newFavicon%" pds-connected-client-172:/usr/share/nginx/
     )
 )
 
@@ -60,6 +62,6 @@ REM =========================================
 echo ---
 echo [INFO] Restarting Docker container pds-connected-client ...
 docker restart pds-connected-client
-
+docker restart pds-connected-client-172
 echo [INFO] Deployment and update completed!
 pause
